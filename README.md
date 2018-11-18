@@ -1,6 +1,22 @@
-# HTTP-Proxy-forward
+# HTTP-Proxy-forward using Apache2
 
 ## Setup http proxy forward
+
+Install apache2
+```
+sudo apt-get update
+sudo apt-get install apache2
+```
+
+Enable site config , SSL & proxy mod 
+
+```
+sudo a2enmod rewrite
+sudo a2enmod ssl
+sudo a2enmod proxy_http
+sudo a2ensite vdd.conf
+sudo a2ensite default-ssl.conf
+```
 
 Change to apache2 config file
 ```
@@ -108,7 +124,7 @@ sudo /etc/init.d/apache2 restart
 
 set it can be executed
 ```
-sudo chmod +x remewssl
+sudo chmod +x renewssl.sh
 ```
 
 To open your crontab file, execute the following command:
